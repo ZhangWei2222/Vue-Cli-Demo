@@ -30,6 +30,10 @@ module.exports = {
     // 开启 CSS source maps?
     sourceMap: false,
   },
+  // 第三方插件配置
+  pluginOptions: {
+    // ...
+  },
   configureWebpack: {
     mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
     devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false,
@@ -78,10 +82,6 @@ module.exports = {
       args[0]['process.env'].APP_VERSION = + new Date()
       return args
     })
-  },
-  // 第三方插件配置
-  pluginOptions: {
-    // ...
   },
   // 所有 webpack-dev-server 的选项都支持，注意
   // 1. 有些值像 host、port 和 https 可能会被命令行参数覆写。
