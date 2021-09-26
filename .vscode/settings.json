@@ -1,0 +1,27 @@
+{
+  // prettier 插件配置
+  // 全局默认使用 prettier 格式化
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // 针对js文件默认使用 prettier 格式化
+  "[javascript]": {
+    // 可以把值设置成 null，则不使用 prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 保存时不自动修复
+    "editor.formatOnSave": true
+  },
+  // eslint 插件配置
+  "eslint.options": {
+    // 检测后缀名为以下的文件
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx"
+    ]
+  },
+  "editor.codeActionsOnSave": {
+    // 每次保存的时候将代码按eslint格式进行修复
+    "source.fixAll.eslint": true
+  },
+  "prettier.semi": true
+}
